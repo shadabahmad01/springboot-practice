@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css"> ul li {list-style-type: none} </style>
+</head>
+<body>
+   <h1>The Posts Update Page</h1>
+   <form th:action="@{/posts/doUpdatePosts}" method="post">
+      <input type="hidden" name="id" th:value="${posts.id}">
+      <ul>
+        <li>title:
+        <li><input type="text" name="title" th:value="${posts.title}">
+        <li>author:
+        <li><input type="text" name="author" th:value="${posts.author}">
+        <li>content:
+        <li><textarea rows="3" cols="30" name="content" th:text="${posts.content}"></textarea>
+        <li><input type="submit" value="Update your Post">
+       </ul>
+   </form>
+</body>
+</html>
