@@ -1,23 +1,46 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+	
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<style type="text/css"> ul li {list-style-type: none} </style>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+   
+	<title>Student Posts</title>
+	
 </head>
+
 <body>
-   <h1>The Posts Update Page</h1>
-   <form th:action="@{/posts/doUpdatePosts}" method="post">
-      <input type="hidden" name="id" th:value="${posts.id}">
-      <ul>
-        <li>title:
-        <li><input type="text" name="title" th:value="${posts.title}">
-        <li>author:
-        <li><input type="text" name="author" th:value="${posts.author}">
-        <li>content:
-        <li><textarea rows="3" cols="30" name="content" th:text="${posts.content}"></textarea>
-        <li><input type="submit" value="Update your Post">
-       </ul>
-   </form>
+	<section class="banner1">
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 offset-md-2">
+					<div class="my-card">
+						<h1 class="text-center"><b>Update your Post</b></h1>
+							<form th:action="@{/posts/doUpdatePosts}" method="post">
+							<input type="hidden" name="id" th:value="${posts.id}">
+   								 <div class="mb-3">
+    								<label for="title" class="form-label"><b>Post title</b></label>
+    								<input type="text" class="form-control" name="title" th:value="${posts.title}">
+ 								 </div>
+ 								 <div class="mb-3">
+    								<label for="author" class="form-label"><b>Author</b></label>
+    								<input type="text" class="form-control" name="author" th:value="${posts.author}">
+ 								 </div>
+ 								 <div class="mb-3">
+    								<label for="content" class="form-label"><b>Content</b></label>
+    								<!-- <input type="text" class="form-control" size="100"name="content">-->
+    								<textarea placeholder="Your Content goes here" rows="13" class="form-control" name="content" th:text="${posts.content}"></textarea>
+    								<div class="mb-3">
+    									<p></p>
+    									<button type="submit" class="btn btn-primary w-100">Update</button>
+    								</div>
+ 								 </div>
+							</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </body>
 </html>

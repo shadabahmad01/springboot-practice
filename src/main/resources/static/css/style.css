@@ -3,14 +3,23 @@ body{
 }
 
 .bg-primary{
-	background: #009688 !important
+	background: #2d6bd2!important
 }
 
 .banner{
 	width: 100%;
-	height: 85vh;
-	background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url(../images/himg.jpg);
+	height: 100vh;
+	background: linear-gradient(to bottom right,rgba(0,0,0,.2),rgba(0,0,0,.8)),url(../images/himg.jpg);
 	background-repeat: no-repeat;
-	background-size: 1550px 700px;
+	background-size: cover;
+	color: white;
+}
+
+.banner1{
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(to bottom right,rgba(0,0,0,.2),rgba(0,0,0,.8)),url(../images/hi.webp);
+	background-repeat: no-repeat;
+	background-size: cover;
 	color: white;
 }

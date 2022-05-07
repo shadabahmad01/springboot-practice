@@ -14,14 +14,14 @@
   <body>
    <nav class="navbar navbar-expand-lg navbar-dark  bg-primary">
   	<div class="container-fluid">
-    	<a class="navbar-brand" href="#"><b><i>StudentPosts</i></b></a>
+    	<a class="navbar-brand" th:href="@{/home}"><b><i>StudentPosts</i></b></a>
     	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       		<span class="navbar-toggler-icon"></span>
     	</button>
     	<div class="collapse navbar-collapse" id="navbarSupportedContent">
       		<ul class="navbar-nav mr-auto text-uppercase">
                 <li class="nav-item">
-                    <a class="nav-link" href="#" ><b><i>Posts</i></b></a>
+                    <a class="nav-link" th:href="@{/posts/postsList}" ><b><i>Posts</i></b></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><b><i>About</i></b></a>
@@ -41,8 +41,8 @@
 
 	<div th:replace="${content}"></div>
 	
-	<footer class="text-center text-white" style="background-color: #009688;">
-      <div class="text-center text-dark p-3" style="background-color: #009688;">
+	<footer class="text-center text-white" style="background-color: #2d6bd2;">
+      <div class="text-center text-dark p-3" style="background-color: #2d6bd2;">
         &copy 2022 Copyright:
         <a class="text-dark" href="#">StudentPosts</a>
       </div>

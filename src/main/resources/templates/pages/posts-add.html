@@ -1,21 +1,45 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+	
 <head>
-<meta charset="UTF-8">
-<style type="text/css"> ul li {list-style-type: none;} </style>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+   
+	<title>Student Posts</title>
+	
 </head>
+
 <body>
-<h1>The Posts Add Page</h1>
-<form th:action="@{/posts/doSavePosts}" method="post">
-   <ul>
-      <li>title:
-      <li><input type="text" name="title">
-      <li>author:
-      <li><input type="text" name="author">
-      <li>content:
-      <li><textarea rows="5" cols="50" name="content"></textarea>
-      <li><input type="submit" value="Save">
-   </ul>
-</form>
+	<section class="banner1">
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 offset-md-2">
+					<div class="my-card">
+						<h1 class="text-center">Add New Post</h1>
+							<form th:action="@{/posts/doSavePosts}" method="post">
+   								 <div class="mb-3">
+    								<label for="title" class="form-label"><b>Post title</b></label>
+    								<input type="text" class="form-control" name="title">
+ 								 </div>
+ 								 <div class="mb-3">
+    								<label for="author" class="form-label"><b>Author</b></label>
+    								<input type="text" class="form-control" name="author">
+ 								 </div>
+ 								 <div class="mb-3">
+    								<label for="content" class="form-label"><b>Content</b></label>
+    								<!-- <input type="text" class="form-control" size="100"name="content">-->
+    								<textarea placeholder="Your Content goes here" rows="13" class="form-control" name="content"></textarea>
+    								<div class="mb-3">
+    									<p></p>
+    									<button type="submit" class="btn btn-primary w-100">Submit</button>
+    								</div>
+ 								 </div>
+							</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </body>
 </html>

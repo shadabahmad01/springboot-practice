@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<h1>The users list Page</h1>
+<table style="width: 50%">
+        <thead><tr>
+        	<th>id</th>
+        	<th>name</th>
+        	<th>salary</th>
+        </tr></thead>
+        <tbody>
+        	<tr th:each="ul:${uList}">
+        		<td th:text="${ul.id}">1</td>
+        		<td th:text="${ul.name}">name</td>
+        		<td th:text="${ul.salary}">salary</td>
+     <!-- 
+        		<td><a th:href="@{/posts/doDeleteById/{id}(id=${pl.id})}">delete</a></td>
+             	<td><a th:href="@{/posts/doFindById/{id}(id=${pl.id})}">update</a></td>
+             	
+          -->
+        	</tr>
+        </tbody>
+  	</table>
+  	
+  	<p>
+  		<a class="btn btn-primary" th:href="@{/users/signUp}" role="button">Click to Add new Post</a>
+  	</p>
+</body>
+</html>

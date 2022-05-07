@@ -24,4 +24,13 @@ public class UsersServiceImpl implements UsersService {
 		return usersMapper.findUsersById(id);
 	}
 
+	@Override
+	public int insertUsers(Users users) {
+		// TODO Auto-generated method stub
+		int rows = usersMapper.insertUsers(users);
+		return rows;
+	}
+
+	
+
 }

@@ -11,7 +11,19 @@
 
 <body>
 	<section class="banner d-flex justify-content-center align-items-center">
-		<h1>welcome to home page</h1>
+	<div class="jumbotron">
+		<h1 class="display-4">Explore your Learning and Carrier.</h1>
+
+		<p class="lead">
+			<ul>
+				<li>Welcome user. Explore <a th:href="@{/posts/postsList}">blogs </a>to clear your queries and learn about upcoming tecnologies and opportunities.</li>
+				<li>And are you preparing for interviews? Do check<a href="#"> interview experiences</a>.</li>
+			</ul>
+		</p>
+			<p> Wants to share your interview experiences or have an informative blog for students. Register yourself to share.</p>
+			<a class="btn btn-lg btn-primary" th:href="@{/posts/postsList}" role="button">Register &raquo;</a>
+		
+	</div>
 	</section>
 </body>
 </html>

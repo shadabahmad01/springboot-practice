@@ -8,4 +8,5 @@ public interface UsersService {
 
 	List<Users> findAllUsers();
 	Users findUsersById(Integer id);
+	int insertUsers(Users users);
 }
